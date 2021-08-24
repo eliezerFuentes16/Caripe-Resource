@@ -1,0 +1,147 @@
+{% extends "layoute_administracion.html" %}
+
+
+{% block content %}
+
+<!-- <h2>Bienvenido Eliezer Fuentes</h2> -->
+<style type="text/css">
+	
+	table {
+	   margin: 5px 0px 0px 0px;
+	   width: 100%;
+	   
+	   box-shadow: 5px 5px 10px silver;
+	 }
+	
+
+
+	td{
+		font:15px Verdana;
+		padding: 5px;
+		font-weight: 300px;
+
+
+	}
+	caption {
+	   padding: 0.3em;
+	   color: #fff;
+	    background: #000;
+	}
+
+
+
+
+	.a12,td{
+
+	   text-align: center;
+	   vertical-align: top;
+	   
+	   border-collapse: collapse;
+	   padding: 0.2em;
+	   caption-side: bottom;
+	   background:white;
+	}
+
+	td{
+		 text-align: center;
+	   vertical-align: top;
+	   
+	   border-collapse: collapse;
+	   padding: 0.3em;
+	   caption-side: bottom;
+	   background:white;
+	   -webkit-border-radius:5px;
+	   font:14px Verdana;
+
+	}
+
+	/*@media (min-width: 850px){
+    .div-index{
+        width:200%;
+
+    }
+    #tabla-index{
+        width:120%;
+
+
+    }*/
+
+    .div-index{
+        width:90%;
+        margin-left:5%;
+    }
+
+    @media (max-width: 1050px){
+    .div-index{
+        width:100%;
+        overflow: auto;
+        margin-left:5px;
+
+
+    }
+    #tabla-index{
+        width:150%;
+
+
+    }
+}
+
+
+
+</style><!-- <h1>{{ ide }}</h1> -->
+
+<h1 style="text-align:center;padding:10px;">Reservaciones</h1>
+
+<div class="div-index" style="">
+
+	<table class="table table-responsive table-striped table-bordered bg-white table-sm" id="tabla-index">
+		<thead>
+			<tr class="" id="fila-tabla-index" style="text-align:center">
+
+
+				<td class="columna-tabla-index-1">N°</td>
+				<td class="columna-tabla-index-1">Reservaci&oacute;n</td>
+				<td class="columna-tabla-index-1">Ingreso</td>
+				<td class="columna-tabla-index-1">Salida</td>
+				<td class="columna-tabla-index-1">Nombre</td>
+				<td class="columna-tabla-index-1">Telefono</td>
+				<td class="columna-tabla-index-1">Correo</td>
+				<!-- <td class="columna-tabla-index-1">Salida</td> -->
+				<td class="columna-tabla-index-1" colspan="2">Operaciones</td>
+
+			</tr>
+		</thead>
+
+
+		<tbody>
+
+			{% for dato in datos %}
+
+			<tr class="" id="fila-tabla-plantas">
+
+
+				<td class="columna-tabla-plantas-1">{{ dato.0 }}</td>
+				<td class="columna-tabla-plantas-1">{{ dato.1 }}</td>
+				<td class="columna-tabla-plantas-1">{{ dato.2 }}</td>
+				<td class="columna-tabla-plantas-1">{{ dato.3 }}</td>
+				<td class="columna-tabla-plantas-1">{{ dato.4 }}</td>
+				<td class="columna-tabla-plantas-1">{{ dato.5 }}</td>
+				<td class="columna-tabla-plantas-1">{{ dato.6 }}</td>
+				<td style="text-align:center" class="columna-tabla-plantas-1"><a href="/reservacion/{{ dato.0 }}" class="btn btn-secondary btn-delete"> Ver </a></td>
+				<td style="text-align:center" class="columna-tabla-plantas-1"><a href="/borrar-reservacion/{{ dato.0 }}" class="btn btn-danger">Borrar</a></td>
+
+			</tr>
+			{% endfor %}
+		</tbody>
+		
+		
+	</table>
+
+
+
+
+</div>
+<footer class="pt-5 my-5 text-muted" style="margin-left:30px; position: absolute; bottom:0;">
+    Familia Moreno Mirabal &middot; &copy; 2021
+  </footer>
+{% endblock %}

@@ -1,0 +1,323 @@
+{% extends "layoute_administracion.html" %}
+{% block content %}
+
+{% for dato in datos %}
+<style>
+	
+     @media screen and (max-width: 1100px) {
+        #div-2-1{
+            width:95%!important;
+            margin-left:2.5%!important;
+        }
+        #div-inputs4{
+            display: block!important;
+        }
+
+        #div-inputs5{
+            display: block!important;
+        }
+
+        #div-inputs6{
+            display: block!important;
+        }
+
+        #div-inputs7{
+            display: block!important;
+        }
+
+        #div-inputs8{
+            display: block!important;
+        }
+        #input-11{
+            
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-12{
+            display: block!important;
+            float:none!important;
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-13{
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+
+        #input-14{
+            display: block!important;
+            float:none!important;
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-15{
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+
+
+        #input-16{
+            display: block!important;
+            float:none!important;
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-17{
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+
+
+        #input-18{
+            display: block!important;
+            float:none!important;
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-19{
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+
+
+     }
+
+    input, textarea, select{
+        background: none;
+        border: none;
+        border-bottom: solid 2px black;
+        
+        font-weight: 400;
+        letter-spacing: 1px;
+        
+        padding: 0 0 0.875em 0;
+        
+        margin-top: 20px;
+        margin-bottom:20px; 
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        outline: none;
+        padding: 0 0 0.875em 0;
+       
+    }
+
+    #div-inputs4{
+    display: flex;
+
+}
+
+#input-11{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    width: 35%;
+}
+
+
+
+#input-12{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    width: 35%;
+}
+
+
+#div-inputs5{
+    display: flex;
+
+}
+
+#input-13{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    width: 35%;
+}
+
+
+
+#input-14{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    width: 35%;
+}
+
+
+#div-inputs6{
+    display: flex;
+
+}
+
+#input-15{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    width: 35%;
+}
+
+
+
+#input-16{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    width: 35%;
+}
+
+
+#div-inputs7{
+    display: flex;
+
+}
+
+#input-17{
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    width: 35%;
+}
+
+
+
+#input-18{
+    
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    width: 35%;
+}
+
+#div-inputs8{
+    display: flex;
+
+}
+#input-19{
+    width: 90%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    border:1px solid black;
+}
+
+
+
+
+</style>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+<symbol id="home" viewBox="0 0 16 16">
+    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+  </symbol>
+</svg>
+<!-- <h2 style="text-align:center">Caripe Resource</h2> -->
+<!--  <a href="/inicio" class="nav-link active fs-4 mt-1 ml-1" aria-current="page"  style="color:#000;"><svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>Volver</a>
+ -->
+
+<div class="" style=" margin-top:10px;">
+    <h2 style="text-align: center; padding-top: 25px; padding-bottom:25px;font-size:40px">Reservaci&oacute;n</h2>
+    <div style="width:95%;margin-left:2.5%;background: #f3f3f3; border: 1px solid black; box-shadow: 5px 5px 10px silver">
+	    <p style="width:90%; margin-left:5%; margin-bottom:40px; font-size:22px;"></p>
+	    <div id="div-2-1" style="width:80%;margin-left:10%;">
+	      
+
+	        <div id="div-3" class="divisiones" >
+
+	            <h3 style="margin-bottom:20px;">Datos Personales</h3><hr>
+	            <div id="div-inputs4">
+
+	             <br>
+	        
+	             <select  id="input-11"  name="paquete" required="TRUE" id="planta-sembrada-siembra" required="TRUE" class="btn dropdown-toggle dropdown-toggle-split bg-light">   
+	                <option value=''>{{dato.1}}</option>
+	                
+	            </select>           
+	            <br>
+	            <input type="text" autocomplete="off" name="ingreso" placeholder="Fecha de Ingreso" value="{{dato.2}}" required="True" id="input-12">
+	            </div>
+	                    
+
+	            <div id="div-inputs5">
+	                <br>
+	                <input type="text" autocomplete="off" name="salida" placeholder="Fecha de Salida" value="{{dato.3}}" required="True" id="input-13">
+	                <br>             
+	            </div>
+	            <h3 style="margin-top:20px;">Datos de la Reserva</h3><hr>
+	            <div id="div-inputs6">
+	                <br>
+	                <input type="text" autocomplete="off" name="nombre" placeholder="Nombre Y Apellido"  value="{{dato.4}}" required="True" id="input-15">        
+	                <br>
+	                <input type="text" autocomplete="off" name="telefono" placeholder="Telefono" value="{{dato.5}}" required="True" id="input-16"> 
+	            </div>
+	            <div id="div-inputs7">    
+	                <br>        
+	                <input type="email" autocomplete="off" name="email" placeholder="Correo Electronico" value="{{dato.6}}" required="True" id="input-17">
+	            </div>
+	            <div id="div-inputs8">
+	                <br>
+	                <textarea name="mensaje" placeholder="Mensaje" required="True" id="input-19" rows="7">{{dato.7}}</textarea>
+	            </div>
+	            <div id="botones">
+	                <div id="div-boton-6" style="width:30%; margin-left:35%;">       
+	                  <!-- <input type="submit" value="Enviar" class="btn btn-primary btn-lg gap-3 p-4 fs-4 mx-auto" style="width:100%;"> -->
+	                </div>
+	            </div>
+	        </div>
+	    
+		</div>
+
+    </div>
+</div>
+
+{% endfor %}
+
+<footer class="pt-5 my-5 text-muted" style="margin-left:30px; ">
+    Familia Moreno Mirabal &middot; &copy; 2021
+  </footer>
+{% endblock %}

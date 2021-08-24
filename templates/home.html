@@ -1,0 +1,495 @@
+{% extends "layoute.html" %}
+
+
+{% block content %}
+
+
+
+<style type="text/css">
+    #div-responsive{
+        display:none;
+    }
+
+    .div-responsve{
+        display: none;
+    }
+    
+    @media screen and (max-width: 992px) {
+        .div-responsve{
+            display: block;
+        }
+
+        #div-1{
+            display: none!important;
+        }
+
+        #div-1-1{
+            display: none
+        }
+
+        #div-1-2{
+            display: none
+        }
+
+        #imagen{
+            display:none;
+        }
+
+        #div-responsive{
+            display:block;
+        }
+
+        #div-2-1{
+            width:5%;
+            margin-left:2.5%;
+        }
+    }
+
+     @media screen and (max-width: 1100px) {
+        #div-2-1{
+            width:95%!important;
+            margin-left:2.5%!important;
+        }
+        #div-inputs4{
+            display: block!important;
+        }
+
+        #div-inputs5{
+            display: block!important;
+        }
+
+        #div-inputs6{
+            display: block!important;
+        }
+
+        #div-inputs7{
+            display: block!important;
+        }
+
+        #div-inputs8{
+            display: block!important;
+        }
+        #input-11{
+            
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-12{
+            display: block!important;
+            float:none!important;
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-13{
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+
+        #input-14{
+            display: block!important;
+            float:none!important;
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-15{
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+
+
+        #input-16{
+            display: block!important;
+            float:none!important;
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-17{
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+
+
+        #input-18{
+            display: block!important;
+            float:none!important;
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-19{
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+
+
+     }
+
+    input, textarea, select{
+        background: none;
+        border: none;
+        border-bottom: solid 2px white;
+        
+        font-weight: 400;
+        letter-spacing: 1px;
+        
+        padding: 0 0 0.875em 0;
+        
+        margin-top: 20px;
+        margin-bottom:20px; 
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        outline: none;
+        padding: 0 0 0.875em 0;
+        color: white;
+    }
+
+    #div-inputs4{
+    display: flex;
+
+}
+
+#input-11{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    width: 35%;
+}
+
+
+
+#input-12{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    width: 35%;
+}
+
+
+#div-inputs5{
+    display: flex;
+
+}
+
+#input-13{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    width: 35%;
+}
+
+
+
+#input-14{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    width: 35%;
+}
+
+
+#div-inputs6{
+    display: flex;
+
+}
+
+#input-15{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    width: 35%;
+}
+
+
+
+#input-16{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    width: 35%;
+}
+
+
+#div-inputs7{
+    display: flex;
+
+}
+
+#input-17{
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    width: 35%;
+}
+
+
+
+#input-18{
+    
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    width: 35%;
+}
+
+#div-inputs8{
+    display: flex;
+
+}
+#input-19{
+    width: 90%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    border:1px solid white;
+}
+input::placeholder{
+    color: rgba(255, 255, 255,0.7);
+}
+
+textarea::placeholder{
+    color: rgba(255, 255, 255,0.7);
+    
+
+}
+
+</style>
+
+
+	<!-- <div style="width:100%;height: 500px;background: url('../static/css/img/foto1.png'); 
+	
+	background-position: center;
+	background-size: cover;" id="div">
+		
+		
+
+	</div> -->
+
+<div class="div-responsve" style="width:95%; margin: auto;box-shadow: 5px 5px 10px silver; margin-bottom:30px">
+    <h2 style="margin-top:30px; text-align: center;">Caripe Resource</h2> 
+
+    <p style="font-size:19px" class="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quas cupiditate deserunt amet assumenda totam eaque numquam beatae necessitatibus! Et totam error sequi, perspiciatis? Praesentium dolore fugit sapiente molestias aut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem modi iste minima similique est, facilis dicta consectetur optio reprehenderit rem eum dolore. Expedita, nostrum, ullam? Et magni perspiciatis corrupti iste.</p>
+
+</div>
+
+<div style="box-shadow: -5px -5px -10px silver;display: flex; height: 450px; margin-top:20px; color:#000" id="div-1" class="">
+
+
+
+    <div class="" id="div-1-1" style="width:500px;  height: 400px;margin-right:7.5%; font:21px Helvetica; padding: 8px;display: inline-block; margin-top:25px; margin-left:40px;"><img style="background-position: center;
+    background-size: cover;" src="../static/css/img/foto3.jpg" id="imagen" width="550" height="400"></div>
+
+
+    <div class="" id="div-1-2" style="width:50%;  height: 400px; float:right;
+  "><h2 style="margin-top:30px; text-align: center;">Caripe Resource</h2> <p style=" font-size:19px; margin-top:35px; margin-bottom:100px; margin-right:10px;" id="p-descripcion-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem animi eius porro deleniti nisi aut neque architecto ipsa nobis ullam unde, adipisci soluta doloremque rem obcaecati modi, voluptatibus culpa, deserunt!lomre   Lorem ipsum dolor sit, amet consectetur, adipisicing elit. A id dolorum rerum tenetur architecto fugiat soluta illo perspiciatis earum vel alias ut veritatis, error eos aliquid magnam? Veritatis, animi, quo.</p></div>
+
+
+</div>
+
+
+<div id="div-responsive" class="bg-ligh justify-content" style="box-shadow:5px 5px 10px silver; margin:20px 0px;">
+    <div class="" id="" style="width:550px;  height: 400px;margin:auto; font:21px Helvetica;">
+        <img style="background-position: center;
+    background-size: cover; margin:auto; margin-top:20px;" src="../static/css/img/foto3.jpg" width="550" height="400">
+
+    </div>
+
+    <div class="" id="" style="width:90%;  height: 400px; margin-left:5%;
+  "> 
+        <p style="color:#000; font-size:19px; margin-top:35px; margin-bottom:10px; margin-right:10px;" id="p-descripcion-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem animi eius porro deleniti nisi aut neque architecto ipsa nobis ullam unde, adipisci soluta doloremque rem obcaecati modi, voluptatibus culpa, deserunt!lomre   Lorem ipsum dolor sit, amet consectetur, adipisicing elit. A id dolorum rerum tenetur architecto fugiat soluta illo perspiciatis earum vel alias ut veritatis, error eos aliquid magnam? Veritatis, animi, quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, sapiente ea in harum iusto voluptas temporibus eos minus dolorum rerum? Distinctio fugit magni architecto atque accusamus sed velit cumque eum!</p>
+
+    </div>
+
+</div>
+<div style="box-shadow: 5px 5px 10px silver;padding-bottom:4px; background: #0063cc">
+<div id="div-2" style=" background: #0063cc;" class="" >
+
+        
+         <h2 style="font-size:40px;text-align: center;color:#fff; padding-top:25px;padding-bottom: 25px;">Paquetes Turisticos</h2>
+
+        <!--  <p style="margin-top:50px;">Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Vel expedita eius nihil sit recusandae quos dolorum repellendus nesciunt rem cum. Odit, dolorum, sunt soluta impedit delectus quia error in laboriosam.</p>
+ -->
+
+
+
+ <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" style="width:80%;margin-right:10%; margin-left:10%;">
+    {% for paquete in paquetes %}
+
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm"  style="height: 300px">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">{{paquete.1}}</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">{{paquete.7}}$<small class="text-muted fw-light">/dia</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>{{paquete.2}}</li>
+              <li>{{paquete.3}}</li>
+              <li>{{paquete.4}}</li>
+              <li>{{paquete.5}}</li>
+            </ul><br><br>
+            <!-- <a type="button" href="" class="w-100 btn btn-lg btn-outline-primary">Detalles</a> -->
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+
+</div>
+
+<div class="bg-dark" style="color:white;">
+    <h2 style="text-align: center; padding-top: 25px; padding-bottom:25px;font-size:40px">Reservar</h2>
+
+    <div id="div-2-1" style="width:80%;margin-left:10%;">
+        <form method="POST" action="/agregar-reservacion">
+
+        <div id="div-3" class="divisiones" >
+
+            <h3 style="margin-bottom:20px;">Datos de la Reserva</h3><hr>
+            <div id="div-inputs4">
+
+             <br>
+        
+             <select  id="input-11"  name="paquete" required="TRUE" id="planta-sembrada-siembra" required="TRUE" class="btn dropdown-toggle dropdown-toggle-split bg-light">   
+                <option value='Primer Paquete'>Primer Paquete</option>
+                <option value='Segundo Paquete'>Segundo Paquete</option>
+                <option value='Tercer Paquete'>Tercer Paquete</option>
+            </select>         
+            <br>
+            <input type="text" autocomplete="off" name="ingreso" placeholder="Fecha de Ingreso" required="True" id="input-12">
+            </div>
+                    
+
+            <div id="div-inputs5">
+                <br>
+                <input type="text" autocomplete="off" name="salida" placeholder="Fecha de Salida" required="True" id="input-13">
+                <br>             
+            </div>
+            <h3 style="margin-top:20px;">Datos Personales</h3><hr>
+            <div id="div-inputs6">
+                <br>
+                <input type="text" autocomplete="off" name="nombre" placeholder="Nombre Y Apellido" required="True" id="input-15">        
+                <br>
+                <input type="text" autocomplete="off" name="telefono" placeholder="Telefono" required="True" id="input-16"> 
+            </div>
+            <div id="div-inputs7">    
+                <br>        
+                <input type="email" autocomplete="off" name="email" placeholder="Correo Electronico" required="True" id="input-17">
+            </div>
+            <div id="div-inputs8">
+                <br>
+                <textarea name="mensaje" placeholder="Mensaje" required="True" id="input-19" rows="7"></textarea>
+            </div>
+            <div id="botones">
+                <div id="div-boton-6" style="width:30%; margin-left:35%;">       
+                  <input type="submit" value="Enviar" class="btn btn-primary btn-lg gap-3 p-4 fs-4 mx-auto" style="width:100%;">
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    </div>
+</div>
+
+<div id="div-3" style="color:#000;background: #0063cc; color:white; " >
+    <h2 style="text-align: center; padding-top: 25px; padding-bottom:25px;font-size:40px;">Contactanos</h2>
+
+    <div style="width:60%;margin-left:20%;">
+        
+        <p style="text-align: center;font-size:20px;">Telefono: 0416-6876-793</p>
+        <p style="text-align: center;font-size:20px;">Correo: CaripeResource@gmail.com</p>
+        <p style="text-align: center;font-size:20px;">Facebook: Caripe_Resource</p>
+         <p style="text-align: center;font-size:20px">Twitter: CaripeResource</p>
+
+          <p style="text-align: center;font-size:20px;padding-bottom:50px;">Instagram: Caripe_R</p>
+    </div>
+
+</div>
+<!-- 
+
+	<style type="text/css">
+			ol {
+  display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(7, 1fr);
+  list-style: none;
+  padding: 0;
+}
+
+.first-day {
+  grid-column-start: 1
+}
+
+	</style>
+
+
+
+	<div style="width: 150px;">
+  <h1>Enero 2021</h1>
+  <ol>
+    <li class="day-name">Lun</li>
+    <li class="day-name">Mar</li>
+    <li class="day-name">Mié</li>
+    <li class="day-name">Jue</li>
+    <li class="day-name">Vie</li>
+    <li class="day-name">Sáb</li>
+    <li class="day-name">Dom</li>
+
+    <li class="first-day">1</li>
+    <li>2</li>
+  
+    <li>31</li>
+  </ol>
+</div>
+
+
+ -->
+
+
+
+{% endblock %}
+
+

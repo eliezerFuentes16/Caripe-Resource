@@ -1,0 +1,42 @@
+{% extends "layoute.html" %}
+{% block content %}
+
+<h1 style="padding-top:40px;margin-left:20px;padding-bottom:10px;">Paquetes.</h1>
+{% for paquete in paquetes%}
+
+
+<div class="" style="margin-top:0px;  background: #fff; padding:10px;">
+<div id="div-paquete-1" class=" shadow-sm" style="background: #fff; padding:10px;">
+	<h2 style="width: 90%; margin-left:5%; text-align: center">{{paquete.1}}</h2>
+
+	<p style="width:87%; margin-left:6.5%; text-align: center ">L{{paquete.6}}</p>
+
+
+	
+	<div class="col" style="width:280px; margin:auto">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3 bg-primary">
+            <h4 class="my-0 fw-normal text-white" style="text-align:center">{{paquete.1}}</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title" style="text-align:center">{{paquete.7}}$<small class="text-muted fw-light" style="text-align:center">/dia</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li style="text-align:center">{{paquete.2}}</li>
+              <li style="text-align:center">{{paquete.3}}</li>
+              <li style="text-align:center">{{paquete.4}}</li>
+              <li style="text-align:center">{{paquete.5}}</li>
+              <br><br>
+              <a type="button" href="/reservacion" class="w-100 btn btn-lg btn-outline-primary">Reservar</a>
+            </ul>
+            <!-- <a type="button" href="" class="w-100 btn btn-lg btn-outline-primary">Reservar</a> -->
+          </div>
+        </div>
+      </div>
+
+</div>
+</div>
+{% endfor %}
+
+
+
+{% endblock %}

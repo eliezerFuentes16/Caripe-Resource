@@ -1,0 +1,313 @@
+{% with seccion="reservacion" %}
+{% endwith %}
+{% extends "layoute.html" %}
+{% block content %}
+<style>
+	
+     @media screen and (max-width: 1100px) {
+        #div-2-1{
+            width:95%!important;
+            margin-left:2.5%!important;
+        }
+        #div-inputs4{
+            display: block!important;
+        }
+
+        #div-inputs5{
+            display: block!important;
+        }
+
+        #div-inputs6{
+            display: block!important;
+        }
+
+        #div-inputs7{
+            display: block!important;
+        }
+
+        #div-inputs8{
+            display: block!important;
+        }
+        #input-11{
+            
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-12{
+            display: block!important;
+            float:none!important;
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-13{
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+
+        #input-14{
+            display: block!important;
+            float:none!important;
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-15{
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+
+
+        #input-16{
+            display: block!important;
+            float:none!important;
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-17{
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+
+
+        #input-18{
+            display: block!important;
+            float:none!important;
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+        #input-19{
+            width:80%!important;
+            margin-left:10%!important;
+        }
+
+
+
+     }
+
+    input, textarea, select{
+        background: none;
+        border: none;
+        border-bottom: solid 2px black;
+        
+        font-weight: 400;
+        letter-spacing: 1px;
+        
+        padding: 0 0 0.875em 0;
+        
+        margin-top: 20px;
+        margin-bottom:20px; 
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        outline: none;
+        padding: 0 0 0.875em 0;
+       
+    }
+
+    #div-inputs4{
+    display: flex;
+
+}
+
+#input-11{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    width: 35%;
+}
+
+
+
+#input-12{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    width: 35%;
+}
+
+
+#div-inputs5{
+    display: flex;
+
+}
+
+#input-13{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    width: 35%;
+}
+
+
+
+#input-14{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    width: 35%;
+}
+
+
+#div-inputs6{
+    display: flex;
+
+}
+
+#input-15{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    width: 35%;
+}
+
+
+
+#input-16{
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    width: 35%;
+}
+
+
+#div-inputs7{
+    display: flex;
+
+}
+
+#input-17{
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    width: 35%;
+}
+
+
+
+#input-18{
+    
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    width: 35%;
+}
+
+#div-inputs8{
+    display: flex;
+
+}
+#input-19{
+    width: 90%;
+    margin-left: 7.5%;
+    margin-right:7.5%;
+    font:21px Helvetica;
+    padding: 8px;
+    border:1px solid black;
+}
+
+
+
+
+</style>
+
+<!-- <h2 style="text-align:center">Caripe Resource</h2> -->
+
+
+<div class="" style=" margin-top:10px;">
+    <h2 style="text-align: center; padding-top: 25px; padding-bottom:25px;font-size:40px">Reservaci&oacute;n</h2>
+    <div style="width:95%;margin-left:2.5%;background: #eee; border: 1px solid black">
+	    <p style="width:90%; margin-left:5%; margin-bottom:40px; font-size:22px; text-align: center;padding-top:20px;">&nbsp; Tu reservaci&oacute;n esta totalmente segura, nos pondremos en contacto con usted, permitanos servirles en sus vacaciones que tanto merece para que sean de relajacion y confort en su mente y cuerpo.</p>
+	    <div id="div-2-1" style="width:80%;margin-left:10%;">
+	        <form method="POST" action="/agregar-reservacion">
+
+	        <div id="div-3" class="divisiones" >
+
+	            <h3 style="margin-bottom:20px;">Datos Personales</h3><hr>
+	            <div id="div-inputs4">
+
+	             <br>
+	        
+	             <select  id="input-11"  name="paquete" required="TRUE" id="planta-sembrada-siembra" required="TRUE" class="btn dropdown-toggle dropdown-toggle-split bg-light">   
+	                <option value='Primer Paquete'>Primer Paquete</option>
+	                <option value='Segundo Paquete'>Segundo Paquete</option>
+	                <option value='Tercer Paquete'>Tercer Paquete</option>
+	            </select>           
+	            <br>
+	            <input type="text" autocomplete="off" name="ingreso" placeholder="Fecha de Ingreso" required="True" id="input-12">
+	            </div>
+
+	            <div id="div-inputs5">
+	                <br>
+	                <input type="text" autocomplete="off" name="salida" placeholder="Fecha de Salida" required="True" id="input-13">
+	                <br>             
+	            </div>
+	            <h3 style="margin-top:20px;">Datos de la Reserva</h3><hr>
+	            <div id="div-inputs6">
+	                <br>
+	                <input type="text" autocomplete="off" name="nombre" placeholder="Nombre Y Apellido" required="True" id="input-15">        
+	                <br>
+	                <input type="text" autocomplete="off" name="telefono" placeholder="Telefono" required="True" id="input-16"> 
+	            </div>
+	            <div id="div-inputs7">    
+	                <br>        
+	                <input type="email" autocomplete="off" name="email" placeholder="Correo Electronico" required="True" id="input-17">
+	            </div>
+	            <div id="div-inputs8">
+	                <br>
+	                <textarea name="mensaje" placeholder="Mensaje" required="True" id="input-19" rows="7"></textarea>
+	            </div>
+	            <div id="botones">
+	                <div id="div-boton-6" style="width:30%; margin-left:35%;">       
+	                  <input type="submit" value="Enviar" class="btn btn-primary btn-lg gap-3 p-4 fs-4 mx-auto" style="width:100%;">
+	                </div>
+	            </div>
+	        </div>
+	    </form>
+		</div>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

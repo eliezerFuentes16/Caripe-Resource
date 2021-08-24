@@ -1,0 +1,83 @@
+{% extends "layoute_administracion.html" %}
+{% block content %}
+
+<section class="seccion-paquete">
+	<form action="/actualizar-paquetes" method="POST">
+	<div class="paquetes">
+		{% for paquete in paquetes[0] %}
+		<h2>Paquete 1</h2>
+		
+	
+			<div class="contenedor">
+				<div class="inputs-1">
+					<input type="text" value="{{ paquete.7 }}" name="precio-1" required="true" autocomplete="off" placeholder="Precio En Dolares" class="inputs input-precio">
+					<input type="text" value="{% if paquete.2!='None'%}{{paquete.2}}{% endif %}" name="servicio-1-1" autocomplete="off" placeholder="Servicio 1" class="inputs input-servicio-1" >
+				</div>
+				<div class="inputs-2">
+					<input type="text" value="{% if paquete.3!=''%}{{paquete.3}}{% endif %}" name="servicio-2-1" autocomplete="off" placeholder="Servicio 2" class="inputs input-servicio-2" >
+					<input type="text" value="{% if paquete.4!=''%}{{paquete.4}}{% endif %}" name="servicio-3-1" autocomplete="off" placeholder="Servicio 3" class="inputs input-servicio-3" >
+				</div>
+			</div>
+			<textarea name="mensaje-1" cols="70" rows="7" required="true" autocomplete="off" class="inputs mensaje"  placeholder="Mensaje">{{ paquete.6 }}</textarea>
+		
+
+	</div>
+	{% endfor %}
+	{% for paquete in paquetes[1] %}
+	<div class="paquetes">
+		<h2>Paquete 2</h2>
+			
+	
+			<div class="contenedor">
+				<div class="inputs-1">
+					<input type="text" value="{{ paquete.7 }}" name="precio-2" min="0" required="true" autocomplete="off" placeholder="Precio En Dolares" class="inputs input-precio">
+					<input type="text" value="{% if paquete.2!=''%}{{paquete.2}}{% endif %}" name="servicio-1-2" autocomplete="off" placeholder="Servicio 1" class="inputs input-servicio-1">
+				</div>
+				<div class="inputs-2">
+					<input type="text" value="{% if paquete.3!=''%}{{paquete.3}}{% endif %}" name="servicio-2-2" autocomplete="off" placeholder="Servicio 2" class="inputs input-servicio-2" >
+					<input type="text" value="{% if paquete.4!=''%}{{paquete.4}}{% endif %}" name="servicio-3-2" autocomplete="off" placeholder="Servicio 3" class="inputs input-servicio-3" >
+				</div>
+			</div>
+			<textarea name="mensaje-2" cols="70" rows="7" required="true" autocomplete="off" class="inputs mensaje"  placeholder="Mensaje">{{ paquete.6 }}</textarea>
+		
+
+	</div>
+	{% endfor %}
+
+	{% for paquete in paquetes[2] %}
+
+
+	<div class="paquetes">
+		<h2>Paquete 3</h2>
+		
+	
+			<div class="contenedor">
+				<div class="inputs-1">
+					<input type="text" value="{{ paquete.7 }}" name="precio-3" required="true" autocomplete="off" placeholder="Precio En Dolares" class="inputs input-precio">
+					<input type="text" value="{{ paquete.2 }}" name="servicio-1-3" autocomplete="off" placeholder="Servicio 1" class="inputs input-servicio-1" >
+				</div>
+				<div class="inputs-2">
+					<input type="text" value="{{ paquete.3 }}" name="servicio-2-3" autocomplete="off" placeholder="Servicio 2" class="inputs input-servicio-2" >
+					<input type="text" value="{{ paquete.4 }}" name="servicio-3-3" autocomplete="off" placeholder="Servicio 3" class="inputs input-servicio-3" >
+				</div>
+			</div>
+			<textarea name="mensaje-3" cols="70" rows="7" required="true" autocomplete="off" class="inputs mensaje"  placeholder="Mensaje">{{ paquete.6 }}</textarea>
+	</div>
+	{% endfor %}
+
+
+
+
+	<input type="submit" name="" value="Guardar Cambios" class="boton btn btn-primary">
+
+	</form>
+	
+  </section>
+
+  <footer class="pt-5 my-5 text-muted" style="margin-left:30px; display: flex;">
+	    Familia Moreno Mirabal &middot; &copy; 2021
+	 </footer>
+
+
+
+{% endblock %}
